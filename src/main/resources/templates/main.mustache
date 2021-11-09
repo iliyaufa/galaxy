@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+    <title>Galaxy 3141</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<div>
+    <div>
+        <div>
+            <form method="post" action="addLord">
+                <input type="text" name ="name" placeholder="Name of Lord's">
+                <input type="text" name = "age" placeholder="Age of Lord's">
+                <button type="submit">Create of Lord</button>
+            </form>
+        </div>
+    </div>
+    <div>List of Lords</div>
+    <form method="post" action="filter">
+        <input type="text" name = "filter">
+        <button type="submit">Find</button>
+    </form>
+    {{#lords}}
+        <div>
+            <b>{{name}}</b>
+            <span>{{age}}</span>
+
+            {{#planet}}
+                Never shown!
+            {{/planet}}
+        </div>
+    {{/lords}}
+</body>
+</html>
